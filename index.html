@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sparetech Ent. – Quality Auto Spare Parts</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+<body>
+
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-logo"><span>Spare</span>tech Ent.</div>
+
+    <div class="nav-links">
+      <a href="#hero">Home</a>
+      <a href="#products">Products</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#newsletter">Contact</a>
+    </div>
+
+    <div class="nav-right">
+      <button class="cart-btn" id="cartBtn" aria-label="Shopping cart">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu" role="menu">
+    <a href="#hero"         role="menuitem">Home</a>
+    <a href="#products"      role="menuitem">Products</a>
+    <a href="#testimonials"  role="menuitem">Testimonials</a>
+    <a href="#newsletter"    role="menuitem">Contact</a>
+  </div>
+
+  <section id="hero" aria-label="Featured products slider">
+    <div class="slider-track" id="sliderTrack">
+
+      <div class="slide active">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1400&auto=format&fit=crop"
+             alt="High-quality brake pads for all vehicle models" />
+        <div class="slide-content">
+          <div class="slide-badge">Best Seller</div>
+          <h1 class="slide-title">High-Quality<br>Brake Pads</h1>
+          <p class="slide-price">₦8,500</p>
+          <button class="btn btn-orange" onclick="openOrderModal('High-Quality Brake Pads', '₦8,500')">
+            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+          </button>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1615906655593-ad0386982a0f?w=1400&auto=format&fit=crop"
+             alt="Premium engine oil for optimal performance" />
+        <div class="slide-content">
+          <div class="slide-badge">Top Quality</div>
+          <h1 class="slide-title">Premium<br>Engine Oil</h1>
+          <p class="slide-price">₦6,200</p>
+          <button class="btn btn-orange" onclick="openOrderModal('Premium Engine Oil', '₦6,200')">
+            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+          </button>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1400&auto=format&fit=crop"
+             alt="NGK spark plugs for reliable ignition" />
+        <div class="slide-content">
+          <div class="slide-badge">Genuine Parts</div>
+          <h1 class="slide-title">NGK Spark<br>Plugs</h1>
+          <p class="slide-price">₦3,800</p>
+          <button class="btn btn-orange" onclick="openOrderModal('NGK Spark Plugs', '₦3,800')">
+            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+          </button>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1580983218765-f663bec07b37?w=1400&auto=format&fit=crop"
+             alt="Car battery replacement and installation" />
+        <div class="slide-content">
+          <div class="slide-badge">Heavy Duty</div>
+          <h1 class="slide-title">Car Battery<br>Units</h1>
+          <p class="slide-price">₦45,000</p>
+          <button class="btn btn-orange" onclick="openOrderModal('Car Battery Units', '₦45,000')">
+            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+          </button>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=1400&auto=format&fit=crop"
+             alt="Shock absorbers for smooth ride comfort" />
+        <div class="slide-content">
+          <div class="slide-badge">Comfort Ride</div>
+          <h1 class="slide-title">Shock<br>Absorbers</h1>
+          <p class="slide-price">₦15,000</p>
+          <button class="btn btn-orange" onclick="openOrderModal('Shock Absorbers', '₦15,000')">
+            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="slider-btn slider-prev" id="slidePrev" aria-label="Previous slide">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <button class="slider-btn slider-next" id="slideNext" aria-label="Next slide">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+
+    <div class="slider-dots" id="sliderDots" aria-label="Slide navigation"></div>
+  </section>
+
+  <section id="delivery" aria-label="Delivery information">
+    <div class="delivery-inner">
+      <div class="delivery-icon">
+        <i class="fas fa-truck-fast"></i>
+      </div>
+      <div class="delivery-text">
+        <h3>🚚 Speedy Delivery Nationwide</h3>
+        <p>Fast, reliable delivery to anywhere within Lagos State and across Nigeria. Same-day dispatch available for orders placed before 12 noon.</p>
+        <div class="delivery-badges">
+          <span class="badge"><i class="fas fa-check-circle"></i> Same-Day Dispatch</span>
+          <span class="badge"><i class="fas fa-map-marker-alt"></i> Lagos State Coverage</span>
+          <span class="badge"><i class="fas fa-flag"></i> Nationwide Delivery</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="products" aria-label="Auto parts catalogue">
+    <div class="section-header">
+      <div>
+        <p style="color:var(--orange);font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.9rem;margin-bottom:.4rem;">
+          Our Catalogue
+        </p>
+        <h2 class="section-title">Quality <span>Spare Parts</span></h2>
+      </div>
+      <p>All parts are genuine, tested, and backed by our satisfaction guarantee.</p>
+    </div>
+
+    <div class="products-grid" id="productsGrid">
+      </div>
+  </section>
+
+  <section id="testimonials" aria-label="Customer testimonials">
+    <div class="testimonials-inner">
+      <div class="section-header">
+        <p style="color:var(--orange);font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.9rem;margin-bottom:.4rem;">
+          What Customers Say
+        </p>
+        <h2 class="section-title">Real <span>Reviews</span></h2>
+      </div>
+
+      <div class="testimonials-slider" id="testiSlider">
+        <div class="testi-track" id="testiTrack">
+          </div>
+      </div>
+
+      <div class="testi-controls">
+        <button class="testi-btn" id="testiPrev" aria-label="Previous testimonial">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="testi-dots" id="testiDots"></div>
+        <button class="testi-btn" id="testiNext" aria-label="Next testimonial">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section id="newsletter" aria-label="Newsletter subscription">
+    <div class="newsletter-inner">
+      <p style="color:var(--orange);font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.9rem;margin-bottom:.4rem;">
+        Stay Updated
+      </p>
+      <h2 class="section-title">Get <span>Exclusive Deals</span></h2>
+      <p>Subscribe to receive the latest offers, new arrivals, and discount vouchers straight to your inbox.</p>
+      <div class="newsletter-form" role="form" aria-label="Newsletter subscription form">
+        <input type="email" id="emailInput" placeholder="Enter your email address" aria-label="Email address" />
+        <button class="btn btn-orange" onclick="handleSubscribe()">
+          <i class="fas fa-paper-plane"></i> Subscribe
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <dialog id="orderDialog">
+    <div class="dialog-header">
+      <h3>Place Your <span>Order</span></h3>
+      <button class="close-dialog-btn" id="closeDialogBtn" aria-label="Close form">&times;</button>
+    </div>
+    <form class="dialog-form" id="dialogForm" method="dialog">
+      <div class="form-group">
+        <label for="modalProduct">Selected Item</label>
+        <input type="text" id="modalProduct" readonly />
+      </div>
+      <div class="form-group">
+        <label for="modalPrice">Price Base</label>
+        <input type="text" id="modalPrice" readonly />
+      </div>
+      <div class="form-group">
+        <label for="custName">Your Full Name *</label>
+        <input type="text" id="custName" placeholder="e.g. John Doe" required />
+      </div>
+      <div class="form-group">
+        <label for="custQuantity">Quantity Required</label>
+        <select id="custQuantity">
+          <option value="1" selected>1 Unit</option>
+          <option value="2">2 Units</option>
+          <option value="3">3 Units</option>
+          <option value="4">4 Units</option>
+          <option value="5">5+ Units</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="custDelivery">Delivery State Location *</label>
+        <input type="text" id="custDelivery" placeholder="e.g. Ikeja, Lagos State" required />
+      </div>
+      <div class="form-group">
+        <label for="custNotes">Extra Order Directions (Optional)</label>
+        <textarea id="custNotes" placeholder="Provide car model details or delivery specifics details here..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-orange" style="margin-top: .5rem; width:100%">
+        <i class="fab fa-whatsapp"></i> Dispatch Order to WhatsApp
+      </button>
+    </form>
+  </dialog>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo"><span>Spare</span>tech Ent.</div>
+        <p>Your trusted partner for genuine auto spare parts in Nigeria. Quality you can count on, every time.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#newsletter">Subscribe</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <div class="footer-contact-item">
+          <i class="fas fa-envelope"></i>
+          <span>sales.sparetechenterprise@gmail.com</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-phone"></i>
+          <span>+234 8033070330</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fab fa-whatsapp"></i>
+          <a href="https://wa.me/2348033070330" target="_blank" rel="noopener"
+             style="color:var(--steel);transition:color .3s;"
+             onmouseover="this.style.color='#25d366'"
+             onmouseout="this.style.color='var(--steel)'">
+            Chat on WhatsApp
+          </a>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Lagos, Nigeria</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Sparetech Enterprises. All rights reserved.</p>
+      <p>Designed with <i class="fas fa-heart" style="color:var(--orange);"></i> in Nigeria</p>
+    </div>
+  </footer>
+
+  <button id="scrollTop" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="./script.js"></script>
+
+</body>
+</html>
