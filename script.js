@@ -2,6 +2,12 @@
 /* ===== CONFIG ===== */
 const WA_NUMBER = '2348030000000'; // 👈 Replace with actual WhatsApp number
 
+// Track order
+function trackAlert(){
+  alert ("Please complete your order to Enable Tracking")
+}
+
+
 /* ===== HERO SLIDER ===== */
 let currentSlide = 0;
 const totalSlides = document.querySelectorAll('.slide').length;
