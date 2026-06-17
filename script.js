@@ -3,9 +3,7 @@
 const WA_NUMBER = '2348030000000'; // 👈 Replace with actual WhatsApp number
 
 // Track order
-function trackAlert(){
-  alert ("Please complete your order to Enable Tracking")
-}
+document.addEventListener('DOMContentLoaded', () => { const el = document.getElementById('trackOrder'); if (!el) return; el.addEventListener('click', (e) => { e.preventDefault(); alert("Please complete your order to Enable Tracking"); }); });
 
 
 /* ===== HERO SLIDER ===== */
