@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Store</title>
+<link rel="icon" href="./SPARETECHLOGO.png">
+<meta name="description" content="Sparetech Enterprise offers authentic auto parts with nationwide delivery across Nigeria. Order genuine spare parts online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+
+
+</head>
+<body>
+    <!-- TOPBAR -->
+<div class="topbar">
+  <div class="container">
+    <span>📞 +234 803 307 0330 &nbsp;|&nbsp; ✉️ info@sparetechenterprise.com</span>
+    <span>🕐 Mon–Sat: 8am – 6pm &nbsp;|&nbsp; <a href="#">Track My Order</a></span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <!-- Logo -->
+    <a href="#" class="logo" aria-label="Sparetech Enterprise Home">
+        <img src="./SPARETECHLOGO.png" alt="">
+    </a>
+
+    <!-- Nav -->
+    <nav aria-label="Main navigation">
+      <a href="./index.html">Home</a>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="store.html" target="_blank">Store</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <!-- Cart -->
+      <button class="cart-btn" aria-label="Shopping cart">
+        <span class="cart-icon">🛒</span>
+        <span>Cart</span>
+        <span class="cart-badge" id="cart-count">0</span>
+      </button>
+      <!-- Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="./index.html" onclick="closeMobileNav()">Home</a>
+    <a href="#products" onclick="closeMobileNav()">Products</a>
+    <a href="#about" onclick="closeMobileNav()">About</a>
+    <a href="#testimonials" onclick="closeMobileNav()">Reviews</a>
+    <a href="#Store">Store</a>
+    <a href="#contact" onclick="closeMobileNav()">Contact</a>
+  </div>
+</header>
+
+
+<!-- PRODUCTS -->
+<section class="products" id="products">
+  <div class="container">
+    <p class="section-sub" style="font-family:'Oswald',sans-serif;font-size:0.8rem;letter-spacing:3px;color:var(--red);text-transform:uppercase;margin-bottom:6px;">What We Offer</p>
+    <h2 class="section-title">Our Auto Parts Catalogue</h2>
+    <p class="section-sub"> High Quality <span style="color:var(--red); font-size: 17px;"> ENGINE CONTROL UNIT BRAIN BOX </span> Sourced from certified manufacturers. Compatible with Toyota, Honda, Mercedes, Hyundai & more.</p>
+    <h2 class="section-title" style="font-size: 15px; margin-top: -27px;"> 📍 Hassle-Free Returns, No Questions Asked. Love it or your money back. Shopping should feel this good. <br> <span style="color: var(--red);"> Start Shopping.</span></h2>
+    <div class="products-grid">
+      <article class="product-card">
+        <div class="product-img">
+           <img src="./image/sp15.jpg" alt="Engine Oil Filter" loading="lazy">
+          <!-- <span class="product-tag">Oil System</span> -->
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">ECU</h3>
+          <p class="product-desc">Don't Scrap Your Car Over a Computer. We'll get you back on the road for a fraction of the cost. Get a Quote.</p>
+          <div class="product-footer">
+            <button class="order-btn" onclick="openModal('ECU')">Order</button>
+          </div>
+        </div>
+      </article>
+      <article class="product-card">
+        <div class="product-img">
+          <img src="./image/sp16.jpg" alt="Brake Pads" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">BRAIN BOX</h3>
+          <p class="product-desc">Stalling, Sputtering, Hesitating? Your ECU is likely the culprit. We have the cure in stock. Restore Smooth Driving.
+
+</p>
+          <div class="product-footer">
+            <button class="order-btn" onclick="openModal('BRAIN BOX')">Order</button>
+          </div>
+        </div>
+      </article>
+      <article class="product-card">
+        <div class="product-img">
+          <img src="./image/sp17.jpg" alt="Car Battery" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">BRAIN BOX</h3>
+          <p class="product-desc">Plug It In, Problem Solved. No programming skills needed. Just install and go. Fix Your Ride Today.</p>
+          <div class="product-footer">
+            <button class="order-btn" onclick="openModal('BRAIN BOX')">Order</button>
+          </div>
+        </div>
+      </article>
+      <article class="product-card">
+        <div class="product-img">
+          <img src="./image/sp18.jpg" alt="Radiator" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">BRAIN BOX</h3>
+          <p class="product-desc">We've Seen It All—And Fixed It All. Decades of expertise in every box. Your car is in safe hands. Order with Confidence.</p>
+          <div class="product-footer">
+            <button class="order-btn" onclick="openModal('BRAIN BOX')">Order</button>
+          </div>
+        </div>
+      </article>
+      <article class="product-card">
+        <div class="product-img">
+          <img src="./image/sp19.jpg" alt="Shock Absorbers" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">ECU</h3>
+          <p class="product-desc">Fall in Love with Driving Again. That new-car feel starts under the hood. We'll help you find it. Revive Your Ride.</p>
+          <div class="product-footer">
+            <button class="order-btn" onclick="openModal('ECU')">Order</button>
+          </div>
+        </div>
+      </article>
+      <article class="product-card">
+        <div class="product-img">
+          <img src="./image/sp20.jpg" alt="Timing Belt" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">ECU</h3>
+          <p class="product-desc">Smooth Starts, Powerful Stops. Total control at your fingertips. Experience the difference instantly. Test Drive a New Brain.</p>
+          <div class="product-footer">
+            <button class="order-btn" onclick="openModal('ECU')">Order</button>
+          </div>
+        </div>
+      </article>
+      <article class="product-card">
+        <div class="product-img">
+          <img src="./image/sp21.jpg" alt="Spark Plugs" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">ECU</h3>
+          <p class="product-desc">Weekend Warrior? Daily Driver? We have the perfect match for your lifestyle and your car. Find Yours.</p>
+          <div class="product-footer">
+            <button class="order-btn" onclick="openModal('ECU')">Order</button>
+          </div>
+        </div>
+      </article>
+      <article class="product-card">
+        <div class="product-img">
+          <img src="./image/sp22.jpg" alt="Alternator" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">ECU</h3>
+          <p class="product-desc">Turn Heads, Not Wrenches. Performance that gets noticed—without the garage time. Upgrade Your Image.</p>
+          <div class="product-footer">
+            <button class="order-btn" onclick="openModal('ECU')">Order</button>
+          </div>
+        </div>
+      </article>
+      <article class="product-card">
+        <div class="product-img">
+          <img src="./image/sp23.jpg" alt="Air Filter" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">BRAIN BOX</h3>
+          <p class="product-desc">Your Car, But Better. Smarter, faster, and more efficient. The upgrade you didn't know you needed. See What Fits.</p>
+          <div class="product-footer">
+            <button class="order-btn" onclick="openModal('BRAIN BOX')">Order</button>
+          </div>
+        </div>
+      </article>
+      <article class="product-card">
+        <div class="product-img">
+          <img src="./image/sp24.jpg" alt="Air Filter" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">BRAIN BOX</h3>
+          <p class="product-desc">Popular Models Selling Fast—Don't Miss Out. We restock weekly, but the best ones go first. Reserve Yours Now.</p>
+          <div class="product-footer">
+            <button class="order-btn" onclick="openModal('BRAIN BOX')">Order</button>
+          </div>
+        </div>
+      </article>
+      <article class="product-card">
+        <div class="product-img">
+          <img src="./image/sp25.jpg" alt="Air Filter" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">BRAIN BOX</h3>
+          <p class="product-desc">Limited Time Offer: Extra 10% Off. Because we appreciate early birds. Treat yourself today. Claim Your Discount.</p>
+          <div class="product-footer">
+            <button class="order-btn" onclick="openModal('BRAIN BOX')">Order</button>
+          </div>
+        </div>
+      </article>
+      <article class="product-card">
+        <div class="product-img">
+          <img src="./image/sp26.jpg" alt="Air Filter" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">BRAIN BOX</h3>
+          <p class="product-desc">Just Restocked—Fresh Inventory Just Arrived. Be the first to grab the latest batch. Shop New Arrivals.</p>
+          <div class="product-footer">
+            <button class="order-btn" onclick="openModal('BRAIN BOX')">Order</button>
+          </div>
+        </div>
+      </article>
+      <article class="product-card">
+        <div class="product-img">
+          <img src="./image/sp27.jpg" alt="Air Filter" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">ECU</h3>
+          <p class="product-desc">It's End of Season Clearance. Get Great deals while we make room for new stock. Your savings are waiting.</p>
+          <div class="product-footer">
+            <button class="order-btn" onclick="openModal('ECU')">Order</button>
+          </div>
+        </div>
+      </article>
+      <article class="product-card">
+        <div class="product-img">
+          <img src="./image/sp28.jpg" alt="Air Filter" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">ECU</h3>
+          <p cla/ss="product-desc">Not Sure Which ECU You Need? We'll help you choose—just ask. Free expert advice before you buy. Chat with Us.</p>
+          <div class="product-footer">
+            <button class="order-btn" onclick="openModal('ECU')">Order</button>
+          </div>
+        </div>
+      </article>
+      <article class="product-card">
+        <div class="product-img">
+          <img src="./image/sp29.jpg" alt="Air Filter" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">ECU</h3>
+          <p class="product-desc">Lifetime Warranty on All Units. We stand behind every product we sell. That's how much we care. Buy Risk-Free.</p>
+          <div class="product-footer">
+            <button class="order-btn" onclick="openModal('ECU')">Order</button>
+          </div>
+        </div>
+      </article>
+      <article class="product-card">
+        <div class="product-img">
+          <img src="./image/sp30.jpg" alt="Air Filter" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">ECU</h3>
+          <p class="product-desc">Fast Dispatch, Same-Day Shipping. Because we know you want your car fixed yesterday. Order Before 2 PM.</p>
+          <div class="product-footer">
+            <button class="order-btn" onclick="openModal('ECU')">Order</button>
+          </div>
+        </div>
+      </article>
+      <article class="product-card">
+        <div class="product-img">
+          <img src="./image/sp31.jpg" alt="Air Filter" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">ECU</h3>
+          <p class="product-desc">Hassle-Free Returns, No Questions Asked. Love it or your money back. Shopping should feel this good. Start Shopping.</p>
+          <div class="product-footer">
+            <button class="order-btn" onclick="openModal('ECU')">Order</button>
+          </div>
+        </div>
+      </article>
+      <article class="product-card">
+        <div class="product-img">
+          <img src="./image/sp32.jpg" alt="Air Filter" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">ECU</h3>
+          <p class="product-desc">Unleash the Beast. Unlock hidden horsepower and razor-sharp throttle response. Upgrade your brain box today. Shop Now.</p>
+          <div class="product-footer">
+            <button class="order-btn" onclick="openModal('ECU')">Order</button>
+          </div>
+        </div>
+      </article>
+      <article class="product-card">
+        <div class="product-img">
+          <img src="./image/sp33.jpg" alt="Air Filter" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">ECU</h3>
+          <p class="product-desc">Smarter Fuel, Faster You. Optimized air/fuel ratios for maximum efficiency and explosive acceleration. Get Your Tune Here.</p>
+          <div class="product-footer">
+            <button class="order-btn" onclick="openModal('ECU')">Order</button>
+          </div>
+        </div>
+      </article>
+      <article class="product-card">
+        <div class="product-img">
+          <img src="./image/sp34.jpg" alt="Air Filter" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">ECU</h3>
+          <p class="product-desc">Turn Your Daily into a Demon. Factory restrictions removed. Plug-and-play performance that pins you to your seat. Buy Now.</p>
+          <div class="product-footer">
+            <button class="order-btn" onclick="openModal('ECU')">Order</button>
+          </div>
+        </div>
+      </article>
+      <article class="product-card">
+        <div class="product-img">
+          <img src="./image/sp35.jpg" alt="Air Filter" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">ECU</h3>
+          <p class="product-desc">The Brain Your Engine Deserves. Precision mapping for superior power delivery. Stop waiting, start winning. Order Today.</p>
+          <div class="product-footer">
+            <button class="order-btn" onclick="openModal('ECU')">Order</button>
+          </div>
+        </div>
+      </article>
+      <article class="product-card">
+        <div class="product-img">
+          <img src="./image/sp36.jpg" alt="Air Filter" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">ECU</h3>
+          <p class="product-desc">Eliminate the Lag. Instant throttle response and smooth power across the entire RPM range. Upgrade Instantly.</p>
+          <div class="product-footer">
+            <button class="order-btn" onclick="openModal('ECU')">Order</button>
+          </div>
+        </div>
+      </article>
+      <article class="product-card">
+        <div class="product-img">
+          <img src="./image/sp37.jpg" alt="Air Filter" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">ECU</h3>
+          <p class="product-desc">Lifetime Warranty on All Units. We stand behind every product we sell. That's how much we care. Buy Risk-Free.</p>
+          <div class="product-footer">
+            <button class="order-btn" onclick="openModal('ECU')">Order</button>
+          </div>
+        </div>
+      </article>
+
+
+    </div>
+  </div>
+</section>
+
+<!-- ORDER MODAL -->
+<div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 id="modal-title">Place Your Order</h3>
+      <button class="modal-close" onclick="closeModal()" aria-label="Close modal">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="order-name">Full Name *</label>
+          <input type="text" id="order-name" placeholder="e.g. Chukwuemeka Okafor" required>
+        </div>
+        <div class="form-group">
+          <label for="order-phone">Phone Number *</label>
+          <input type="tel" id="order-phone" placeholder="e.g. 08012345678" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="order-part">Auto Part *</label>
+          <input type="text" id="order-part" placeholder="e.g. Engine Oil Filter">
+        </div>
+        <div class="form-group">
+          <label for="order-qty">Quantity *</label>
+          <input type="number" id="order-qty" placeholder="e.g. 2" min="1" value="1">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="order-car">Car Make & Model</label>
+        <input type="text" id="order-car" placeholder="e.g. Toyota Camry 2018">
+      </div>
+      <div class="form-group">
+        <label for="order-notes">Additional Notes (optional)</label>
+        <textarea id="order-notes" placeholder="Specify any additional requirements or delivery location..."></textarea>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn-whatsapp" onclick="submitOrder()">
+        <span>📱</span> Send Order via WhatsApp
+      </button>
+    </div>
+  </div>
+</div>
+
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/2348033070330?text=Hello%20Sparetech%20Enterprise!%20I%20would%20like%20to%20inquire%20about%20auto%20parts."
+   class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+  💬
+</a>
+
+<script>
+  
+/* ===== CONFIG ===== */
+const WA_NUMBER = '2348030000000'; // 👈 Replace with actual WhatsApp number
+
+
+/* ===== MOBILE NAV ===== */
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobile-nav');
+
+hamburger.addEventListener('click', () => {
+  const isOpen = mobileNav.classList.toggle('open');
+  hamburger.setAttribute('aria-expanded', isOpen);
+});
+
+function closeMobileNav() {
+  mobileNav.classList.remove('open');
+  hamburger.setAttribute('aria-expanded', 'false');
+}
+
+/* ===== MODAL ===== */
+const modalOverlay = document.getElementById('modal-overlay');
+
+function openModal(partName) {
+  document.getElementById('order-part').value = partName || '';
+  modalOverlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  setTimeout(() => document.getElementById('order-name').focus(), 100);
+}
+
+function closeModal() {
+  modalOverlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// Close on overlay click
+modalOverlay.addEventListener('click', e => { if (e.target === modalOverlay) closeModal(); });
+
+// Close on Escape
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+/* ===== ORDER SUBMISSION ===== */
+function submitOrder() {
+  const name  = document.getElementById('order-name').value.trim();
+  const phone = document.getElementById('order-phone').value.trim();
+  const part  = document.getElementById('order-part').value.trim();
+  const qty   = document.getElementById('order-qty').value.trim();
+  const car   = document.getElementById('order-car').value.trim();
+  const notes = document.getElementById('order-notes').value.trim();
+
+  if (!name || !phone || !part || !qty) {
+    alert('Please fill in all required fields (Name, Phone, Auto Part, Quantity).');
+    return;
+  }
+
+  // Increment cart badge
+  const badge = document.getElementById('cart-count');
+  badge.textContent = parseInt(badge.textContent) + parseInt(qty);
+
+  const msg = [
+    '🚗 *NEW ORDER – Sparetech Enterprise*',
+    '-----------------------------------',
+    `👤 *Name:* ${name}`,
+    `📞 *Phone:* ${phone}`,
+    `🔧 *Part:* ${part}`,
+    `📦 *Quantity:* ${qty}`,
+    car   ? `🚘 *Car:* ${car}` : '',
+    notes ? `📝 *Notes:* ${notes}` : '',
+    '-----------------------------------',
+    '_Sent via sparetechenterprise.com_'
+  ].filter(Boolean).join('%0A');
+
+  window.open(`https://wa.me/${WA_NUMBER}?text=${msg}`, '_blank');
+
+  // Reset & close
+  ['order-name','order-phone','order-part','order-qty','order-car','order-notes']
+    .forEach(id => { const el = document.getElementById(id); if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') { el.value = el.id === 'order-qty' ? '1' : ''; } });
+  closeModal();
+}
+</script>
+
+</body>
+</html>

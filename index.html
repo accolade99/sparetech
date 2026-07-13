@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sparetech</title>
+<link rel="icon" href="./SPARETECHLOGO.png">
+<meta name="description" content="Sparetech Enterprise offers authentic auto parts with nationwide delivery across Nigeria. Order genuine spare parts online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+
+
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="container">
+    <span>📞 +234 803 307 0330 &nbsp;|&nbsp; ✉️ info@sparetechenterprise.com</span>
+    <span>🕐 Mon–Sat: 8am – 6pm &nbsp;|&nbsp; <a href="#" id="trackOrder">Track My Order</a></span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <!-- Logo -->
+    <a href="#" class="logo" aria-label="Sparetech Enterprise Home">
+        <img src="./SPARETECHLOGO.png" alt="">
+    </a>
+
+    <!-- Nav -->
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="store.html" target="_blank">Store</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <!-- Cart -->
+      <button class="cart-btn" aria-label="Shopping cart">
+        <span class="cart-icon">🛒</span>
+        <span>Cart</span>
+        <span class="cart-badge" id="cart-count">0</span>
+      </button>
+      <!-- Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="#home" onclick="closeMobileNav()">Home</a>
+    <a href="#products" onclick="closeMobileNav()">Products</a>
+    <a href="#about" onclick="closeMobileNav()">About</a>
+    <a href="#testimonials" onclick="closeMobileNav()">Reviews</a>
+    <a href="store.html" target="_blank">Store</a>
+    <a href="#contact" onclick="closeMobileNav()">Contact</a>
+  </div>
+</header>
+
+<!-- HERO SLIDER -->
+<section class="hero" id="home" aria-label="Featured auto parts">
+  <div class="slides-wrapper" id="slides-wrapper">
+
+    <!-- Slide 1 -->
+    <div class="slide">
+       <div class="slide-bg" style="background-image: url('./image/sp1.jpg');"></div>
+      <div class="slide-content">
+        <span class="slide-badge">⚡ Best Seller</span>
+        <h1 class="slide-title">ECU – Premium Quality</h1>
+        <p class="slide-desc">Your Car Deserves a Fresh Start. Give it a brain that thinks faster, works smarter, and lasts longer. Order with Confidence Today.</p>
+        <!-- <div class="slide-price">From ₦4,500</div> -->
+        <button class="btn-primary" onclick="openModal('ECU')">Order Now →</button>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide">
+      <div class="slide-bg" style="background-image: url('./image/sp2.jpg');"></div>
+      <div class="slide-content">
+        <span class="slide-badge">🔥 Hot Deal</span>
+        <h1 class="slide-title">BRAIN BOX – Certified Safe</h1>
+        <p class="slide-desc">No Tricks. Just Reliable Performance. Every ECU is tested twice before it ships—because your trust matters to us. Shop Now..</p>
+        <button class="btn-primary" onclick="openModal('ECU')">Order Now →</button>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide">
+      <div class="slide-bg" style="background-image: url('./image/sp3.jpg');"></div>
+      <div class="slide-content">
+        <span class="slide-badge">🚀 Fast Delivery</span>
+        <h1 class="slide-title">ECU – All Makes & Models</h1>
+        <p class="slide-desc">Drive Happy, Drive Safe. A smooth-running engine means peace of mind on every journey. We make that happen. Get Yours Now.</p>
+        <button class="btn-primary" onclick="openModal('ECU')">Order Now →</button>
+      </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="slide">
+      <div class="slide-bg" style="background-image: url('./image/sp4.jpg');"></div>
+      <div class="slide-content">
+        <span class="slide-badge">✅ Authentic</span>
+        <h1 class="slide-title">ECU – Genuine Parts</h1>
+        <p class="slide-desc">We Take the Guesswork Out. Exact fit, pre-programmed, and ready to install. No headaches, just results. Buy with Ease.</p>
+        <button class="btn-primary" onclick="openModal('ECU')">Order Now →</button>
+      </div>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="slide">
+      <div class="slide-bg" style="background-image: url('./image/sp5.jpg');"></div>
+      <div class="slide-content">
+        <span class="slide-badge">🌍 Nationwide</span>
+        <h1 class="slide-title">BRAIN BOX</h1>
+        <p class="slide-desc">Thousands of Happy Drivers Can't Be Wrong. Join our family of satisfied customers. Quality you can count on. See Reviews & Buy.</p>
+        <button class="btn-primary" onclick="openModal('ECU')">Order Now →</button>
+      </div>
+    </div>
+
+  </div>
+  <button class="hero-prev" onclick="changeSlide(-1)" aria-label="Previous slide">&#8592;</button>
+  <button class="hero-next" onclick="changeSlide(1)" aria-label="Next slide">&#8594;</button>
+  <div class="hero-dots" id="hero-dots"></div>
+</section>
+
+<!-- FEATURES STRIP -->
+<div class="features-strip">
+  <div class="container">
+    <div class="features-grid">
+      <div class="feature-item">
+        <div class="feature-icon">🚚</div>
+        <div class="feature-text">
+          <strong>Nationwide Delivery</strong>
+          <span>We ship to all 36 states</span>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">✅</div>
+        <div class="feature-text">
+          <strong>100% Authentic</strong>
+          <span>Only genuine OEM parts</span>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🔒</div>
+        <div class="feature-text">
+          <strong>Secure Payments</strong>
+          <span>Bank transfer & POS</span>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🎧</div>
+        <div class="feature-text">
+          <strong>24/7 Support</strong>
+          <span>WhatsApp or call us</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<section class="products" id="products">
+  <div class="container">
+    <p class="section-sub" style="font-family:'Oswald',sans-serif;font-size:0.8rem;letter-spacing:3px;color:var(--red);text-transform:uppercase;margin-bottom:6px;">What We Offer</p>
+    <h2 class="section-title">Our Auto Parts Catalogue</h2>
+    <p class="section-sub">Sourced from certified manufacturers. Compatible with Toyota, Honda, Mercedes, Hyundai & more.</p>
+
+    <div class="products-grid">
+
+      <article class="product-card">
+        <div class="product-img">
+           <img src="./image/sp6.jpg" alt="image1" loading="lazy">
+          <!-- <span class="product-tag">image1</span> -->
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">ECU</h3>
+          <p class="product-desc">More Miles, Less Fuel. Our ECUs are tuned to save you money at the pump—week after week. Start Saving Today.</p>
+          <div class="product-footer">
+            <!-- <div class="product-price">₦4,500 <small>per unit</small></div> -->
+            <button class="order-btn" onclick="openModal('ECU')">Order</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-img">
+          <img src="./image/sp7.jpg" alt="Brake Pads" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">ECU</h3>
+          <p class="product-desc">Premium Quality, Affordable Price. Why overpay elsewhere? Get dealer-level quality for less. Check the Price.</p>
+          <div class="product-footer">
+            <button class="order-btn" onclick="openModal('ECU')">Order</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-img">
+          <img src="./image/sp8.jpg" alt="Car Battery" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">BRAIN BOX</h3>
+          <p class="product-desc">Invest in Your Ride, Not Your Mechanic. Stop costly repairs. A new brain box fixes the root cause. Fix It for Less.</p>
+          <div class="product-footer">
+            <button class="order-btn" onclick="openModal('ECU')">Order</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-img">
+          <img src="./image/sp9.jpg" alt="Radiator" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">ECU</h3>
+          <p class="product-desc">Small Upgrade, Big Returns. The most cost-effective performance boost you'll ever buy. Add to Cart & Save.</p>
+          <div class="product-footer">
+            <button class="order-btn" onclick="openModal('ECU')">Order</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-img">
+          <img src="./image/sp10.jpg" alt="Shock Absorbers" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">BRAIN BOX</h3>
+          <p class="product-desc">We Price Match—Because You Deserve the Best Deal. Found it cheaper elsewhere? Let us know. Claim Your Match.
+
+</p>
+          <div class="product-footer">
+            <button class="order-btn" onclick="openModal('BRAIN BOX')">Order</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-img">
+          <img src="./image/sp11.jpg" alt="Timing Belt" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">BRAIN BOX</h3>
+          <p class="product-desc">Pay Less, Drive More. Simple math. Better ECU = better value. Grab the Deal.</p>
+          <div class="product-footer">
+            <button class="order-btn" onclick="openModal('BRAIN BOX')">Order</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-img">
+          <img src="./image/sp12.jpg" alt="Spark Plugs" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">BRAIN BOX</h3>
+          <p class="product-desc">Free Shipping on Every Order. No hidden fees. Just great products delivered to your door. Order Now.</p>
+          <div class="product-footer">
+            <button class="order-btn" onclick="openModal('BRAIN BOX')">Order</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-img">
+          <img src="./image/sp13.jpg" alt="Alternator" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">BRAIN BOX</h3>
+          <p class="product-desc">Free Shipping on Every Order. No hidden fees. Just great products delivered to your door. Order Now.</p>
+          <div class="product-footer">
+            <button class="order-btn" onclick="openModal('BRAIN BOX')">Order</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-img">
+          <img src="./image/sp14.jpg" alt="Air Filter" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">BRAIN BOX</h3>
+          <p class="product-desc">Check Engine Light Got You Stressed? Breathe easy. We have the exact fix you need, pre-tested and guaranteed. Solve It Now.</p>
+          <div class="product-footer">
+            <div class="product-price">₦6,500 <small>per unit</small></div>
+            <button class="order-btn" onclick="openModal('BRAIN BOX')">Order</button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT / CEO -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-inner">
+      <div class="about-img-wrap">
+        <div class="about-img-bg"></div>
+        <div class="about-img">
+          <img src="./CEOsparetech.jpg" alt="CEO of Sparetech Enterprise" loading="lazy">
+        </div>
+        <div class="about-badge-wrap">
+          <strong>35+</strong>
+          <span>Years in<br>Business</span>
+        </div>
+      </div>
+
+      <div class="about-content">
+        <p class="label">About Our Business</p>
+        <h2>Built on Trust, Driven by Authenticity</h2>
+        <p>Sparetech Enterprise was founded with one mission: to give Nigerian car owners access to genuine, affordable auto parts — without the stress of counterfeit products or delayed delivery.</p>
+        <p>From our base, we serve customers across all 36 states of Nigeria, partnering with verified manufacturers and importers to ensure every part that leaves our store is 100% original.</p>
+        <blockquote>"Our customers' vehicles deserve authentic parts. That's the promise we've kept for over three decades."</blockquote>
+        <p class="ceo-name">Chief Chibuzo Anaba</p>
+        <p class="ceo-title">Founder & CEO, Sparetech Enterprise</p>
+        <br>
+        <button class="btn-primary" onclick="openModal('General Inquiry')">Get a Quote →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <p class="section-sub" style="font-family:'Oswald',sans-serif;font-size:0.8rem;letter-spacing:3px;color:var(--red);text-transform:uppercase;margin-bottom:6px;">Customer Reviews</p>
+    <h2 class="section-title">What Our Customers Say</h2>
+    <p class="section-sub">Thousands of satisfied car owners across Nigeria trust Sparetech Enterprise.</p>
+
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"I ordered brake pads for my Toyota Camry on Monday and they arrived in Lagos by Wednesday. The parts are 100% original. Sparetech is the real deal — no more buying from roadside mechanics!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar">AO</div>
+          <div class="testi-info">
+            <strong>Adebayo Okonkwo</strong>
+            <span>Lagos, Nigeria</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Got my alternator replaced with a Sparetech unit 6 months ago. Still running perfectly. Their WhatsApp ordering system is very easy to use. I've referred all my mechanic friends."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">IN</div>
+          <div class="testi-info">
+            <strong>Ibrahim Nwosu</strong>
+            <span>Abuja, Nigeria</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-stars">★★★★☆</div>
+        <p class="testi-text">"I was skeptical ordering online at first, but Sparetech delivered exactly what was described. The oil filter for my Honda Accord fit perfectly. Prices are very competitive too!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar">FC</div>
+          <div class="testi-info">
+            <strong>Funmi Chukwu</strong>
+            <span>Port Harcourt, Nigeria</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"I run a mechanic workshop in Kano and Sparetech is my go-to supplier. Bulk orders are handled fast, packaging is excellent, and everything is always genuine. Highly recommended!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar">MK</div>
+          <div class="testi-info">
+            <strong>Musa Kawu</strong>
+            <span>Kano, Nigeria</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Ordered shock absorbers for my Hyundai Tucson. The ordering process on WhatsApp was seamless, and the delivery to Enugu took just 3 days. Excellent service from Sparetech!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar">CE</div>
+          <div class="testi-info">
+            <strong>Chioma Eze</strong>
+            <span>Enugu, Nigeria</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Best auto parts store I've dealt with in Nigeria. Their knowledge of parts is impressive — I described my car problem and they knew exactly what I needed. True professionals."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">TO</div>
+          <div class="testi-info">
+            <strong>Tunde Olawale</strong>
+            <span>Ibadan, Nigeria</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+  <div class="newsletter-inner">
+    <h2>Get Exclusive Deals & Updates</h2>
+    <p>Subscribe to our newsletter for special discounts, new arrivals, and maintenance tips sent straight to your inbox.</p>
+    <div class="newsletter-form">
+      <input type="email" id="newsletter-email" placeholder="Enter your email address..." aria-label="Email address">
+      <button onclick="subscribeNewsletter()">Subscribe</button>
+    </div>
+    <p id="newsletter-msg"></p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-name"><span>Spare</span>tech <span>E</span>nterprise</div>
+        <p>Nigeria's trusted source for authentic auto parts. Quality, authenticity, and nationwide delivery — since 1990.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">in</a>
+          <a href="#" aria-label="Twitter">𝕏</a>
+          <a href="https://wa.me/2348030000000" aria-label="WhatsApp">W</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#" onclick="openModal('General Inquiry')">Order Now</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="#products" onclick="openModal('Engine Parts')">Engine Parts</a></li>
+          <li><a href="#products" onclick="openModal('Brake System')">Brake System</a></li>
+          <li><a href="#products" onclick="openModal('Electrical Parts')">Electrical</a></li>
+          <li><a href="#products" onclick="openModal('Suspension Parts')">Suspension</a></li>
+          <li><a href="#products" onclick="openModal('Cooling System')">Cooling System</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <div class="contact-item"><span class="ci">📍</span><span>40 Osoro Street, Ladipo Market, Munshin Lagos (SHOP D)</span></div>
+        <div class="contact-item"><span class="ci">📍</span><span>BRANCH OFFICE: 19 Osoro Street, Ladipo Market, Munshin Lagos (Trinity Plaza)</span></div>
+        <div class="contact-item"><span class="ci">📞</span><span>+234 803 307 0330</span></div>
+        <div class="contact-item"><span class="ci">✉️</span><span>info@sparetechenterprise.com</span></div>
+        <div class="contact-item"><span class="ci">🕐</span><span>Mon–Fri: 8am – 6pm</span></div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Sparetech Enterprise. All rights reserved.</span>
+      <span>Authentic Auto Parts | Nationwide Delivery | Nigeria | DANDY AMA </span>
+    </div>
+  </div>
+</footer>
+
+<!-- ORDER MODAL -->
+<div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 id="modal-title">Place Your Order</h3>
+      <button class="modal-close" onclick="closeModal()" aria-label="Close modal">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="order-name">Full Name *</label>
+          <input type="text" id="order-name" placeholder="e.g. John Doe" required>
+        </div>
+        <div class="form-group">
+          <label for="order-phone">Phone Number *</label>
+          <input type="tel" id="order-phone" placeholder="e.g. 08012345678" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="order-part">Auto Part *</label>
+          <input type="text" id="order-part" placeholder="e.g. Engine Oil Filter">
+        </div>
+        <div class="form-group">
+          <label for="order-qty">Quantity *</label>
+          <input type="number" id="order-qty" placeholder="e.g. 2" min="1" value="1">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="order-car">Car Make & Model</label>
+        <input type="text" id="order-car" placeholder="e.g. Toyota Camry 2018">
+      </div>
+      <div class="form-group">
+        <label for="order-notes">Additional Notes (optional)</label>
+        <textarea id="order-notes" placeholder="Specify any additional requirements or delivery location..."></textarea>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn-whatsapp" onclick="submitOrder()">
+        <span>📱</span> Send Order via WhatsApp
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/2348033070330?text=Hello%20Sparetech%20Enterprise!%20I%20would%20like%20to%20inquire%20about%20auto%20parts."
+   class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+  💬
+</a>
+
+<script src="./script.js"></script>
+</body>
+</html>
