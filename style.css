@@ -13,6 +13,67 @@
   --radius: 6px;
 }
 
+/*Sparetech Promo Popup Styles*/
+
+/* The main modal container */
+#sp-imageDialog {
+  border: none;
+  border-radius: 12px;
+  max-width: 450px;
+  width: 90%;
+  max-height: 90vh;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+  position: relative;
+  background: transparent;
+}
+
+/* Dark, blurred overlay background */
+#sp-imageDialog::backdrop {
+  background: rgba(15, 23, 42, 0.75); 
+  backdrop-filter: blur(4px); 
+}
+
+/* Image styling */
+#sp-popupImage {
+  padding-top: 5rem;
+  width: 100%;
+  height: auto;
+  max-height: 90vh;
+  display: block;
+  object-fit: contain;
+  border-radius: 20px;
+}
+
+/* Circular Close Button */
+#sp-closeBtn {
+  position: absolute;
+  top: 70px;
+  right: 60px;
+  background: #334155;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  transition: background-color 0.15s, transform 0.1s;
+  z-index: 10;
+}
+
+#sp-closeBtn:hover {
+  background: #ef4444; /* Turns red on hover */
+  transform: scale(1.05);
+}
+
+
 /* ===== RESET ===== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }

@@ -143,3 +143,33 @@ function subscribeNewsletter() {
 document.getElementById('newsletter-email').addEventListener('keypress', e => {
   if (e.key === 'Enter') subscribeNewsletter();
 });
+
+  // Sparetech Promo Popup Interactivity
+
+document.addEventListener('DOMContentLoaded', () => {
+  const spDialog = document.getElementById('sp-imageDialog');
+  const spCloseBtn = document.getElementById('sp-closeBtn');
+
+  // Trigger the popup exactly 3 seconds after the website loads
+  setTimeout(() => {
+    if (spDialog) {
+      spDialog.showModal();
+    }
+  }, 3000);
+
+  // Close when clicking the 'X' button
+  if (spCloseBtn) {
+    spCloseBtn.addEventListener('click', () => {
+      spDialog.close();
+    });
+  }
+
+  // Close when clicking outside the image box (on the dark backdrop)
+  if (spDialog) {
+    spDialog.addEventListener('click', (e) => {
+      if (e.target === spDialog) {
+        spDialog.close();
+      }
+    });
+  }
+});
