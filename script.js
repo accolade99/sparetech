@@ -1,10 +1,13 @@
 
 /* ===== CONFIG ===== */
-const WA_NUMBER = '2348030000000'; // 👈 Replace with actual WhatsApp number
+const WA_NUMBER = '2348033070330'; // 👈 Replace with actual WhatsApp number
 
-// Track order
-document.addEventListener('DOMContentLoaded', () => { const el = document.getElementById('trackOrder'); if (!el) return; el.addEventListener('click', (e) => { e.preventDefault(); alert("Please complete your order to Enable Tracking"); }); });
+// /
 
+document.addEventListener('DOMContentLoaded', () => { 
+  const el = document.getElementById('trackOrder'); if (!el) return; 
+  el.addEventListener('click', (e) => { 
+    e.preventDefault(); alert("Please complete your order to Enable Tracking"); }); });
 
 /* ===== HERO SLIDER ===== */
 let currentSlide = 0;
@@ -144,11 +147,22 @@ document.getElementById('newsletter-email').addEventListener('keypress', e => {
   if (e.key === 'Enter') subscribeNewsletter();
 });
 
-  // Sparetech Promo Popup Interactivity
+
+// Sparetech Promo Popup Interactivity
 
 document.addEventListener('DOMContentLoaded', () => {
   const spDialog = document.getElementById('sp-imageDialog');
   const spCloseBtn = document.getElementById('sp-closeBtn');
+
+  const removePromoDialog = () => {
+    if (!spDialog) return;
+
+    if (spDialog.open) {
+      spDialog.close();
+    }
+
+    spDialog.remove();
+  };
 
   // Trigger the popup exactly 3 seconds after the website loads
   setTimeout(() => {
@@ -159,17 +173,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Close when clicking the 'X' button
   if (spCloseBtn) {
-    spCloseBtn.addEventListener('click', () => {
-      spDialog.close();
-    });
+    spCloseBtn.addEventListener('click', removePromoDialog);
   }
 
   // Close when clicking outside the image box (on the dark backdrop)
   if (spDialog) {
     spDialog.addEventListener('click', (e) => {
       if (e.target === spDialog) {
-        spDialog.close();
+        removePromoDialog();
       }
     });
   }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && spDialog && spDialog.open) {
+      removePromoDialog();
+    }
+  });
 });
